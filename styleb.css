@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+  background-color: #f7f7f7;
+}
+
+.navbmenu {
+  width: 100%;
+  height: 15vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbmenu .menu {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+
+.navbmenu .menu img {
+  height: 75%;
+}
+
+.contenedor {
+  background-color: #FFF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+}
+
+.contenedor [class*=col-] {
+  padding: 0;
+}
+
+.contenedor .nav-pills .nav-link {
+  color: #000;
+  background-color: #FFF;
+  border-radius: 0px;
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  opacity: .7;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.contenedor .nav-pills .nav-link.active {
+  border-right: 0px solid transparent;
+  border-bottom: 2px solid #007bff;
+  opacity: 1;
+}
+
+.contenedor .nav-pills .nav-link:hover {
+  border-bottom: 2px solid #007bff;
+  opacity: 1;
+}
+
+.contenedor .nav-pills .nav-link img {
+  height: 2em;
+  padding-right: .5em;
+}
+
+.contenedor .nav-pills .nav-link span {
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  font-size: 1em;
+}
+
+.input {
+  width: 100%;
+  position: relative;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+}
+
+.input input,
+.input select {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 0 1em;
+}
+
+.input select {
+  background: transparent;
+  padding: 0 1em;
+}
+
+label {
+  font-weight: bold;
+}
+
+.input.select {
+  padding-right: 1em;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+  height: 40px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  color: #3b3b3b;
+  height: 40px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid #d8d8d8;
+  padding: 0 1em;
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #d8d8d8;
+  border-top: 0;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  font-weight: 300;
+  color: #3b3b3b;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+}
+
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+
+.custom-option.selected {
+  color: #ffffff;
+  background-color: #007bff;
+}
+
+.arrow {
+  position: relative;
+  height: 12px;
+  width: 12px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+}
+
+.arrow::before {
+  left: -4px;
+  transform: rotate(45deg);
+  background-color: #394a6d;
+}
+
+.arrow::after {
+  left: 4px;
+  transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+
+.open .arrow::before {
+  left: -4px;
+  transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+.multistep-container {
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.multistep-container .active-button {
+  display: table;
+  margin: auto;
+  padding-left: 0;
+}
+
+.multistep-container .active-button li {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.multistep-container .active-button li .round-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  display: block;
+  color: #000;
+  text-align: center;
+  font-family: 'poppins';
+  font-weight: 500;
+  line-height: 30px;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 500000000;
+}
+
+.multistep-container .active-button li.active .round-button {
+  background-color: #007bff;
+  color: #FFF;
+}
+
+.multistep-container .active-button li:not(:first-child):before {
+  position: absolute;
+  content: '';
+  width: 117px;
+  height: 3px;
+  background-color: #d8d8d8;
+  left: -59px;
+  top: 29%;
+  transform: translateY(-50%);
+}
+
+.multistep-container .active-button li.active:not(:first-child):before {
+  background-color: #007bff;
+}
+
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: #FFF;
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  padding: .5em;
+}
+
+button:disabled {
+  background-color: #848484;
+  border-color: #5f5f5f;
+  cursor: not-allowed;
+}
+
+.dato-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.contenedor.error {
+  background-color: rgb(255, 163, 163);
+  border-color: rgb(255, 0, 0);
+  font-weight: bold;
+}
